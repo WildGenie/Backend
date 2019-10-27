@@ -1,18 +1,18 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using GelecekBilimde.Backend.Articles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.DataProtection;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using GelecekBilimde.Backend.EntityFrameworkCore;
-using GelecekBilimde.Backend.MultiTenancy;
-using StackExchange.Redis;
+using Microsoft.AspNetCore.Rewrite;
+using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using Volo.Abp;
-using Volo.Abp.AspNetCore.MultiTenancy;
+using Volo.Abp.AspNetCore;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Autofac;
 using Volo.Abp.Localization;
@@ -24,7 +24,8 @@ namespace GelecekBilimde.Backend
     [DependsOn(
         typeof(BackendHttpApiModule),
         typeof(AbpAutofacModule),
-        typeof(AbpAspNetCoreMultiTenancyModule),
+        typeof(AbpAspNetCoreModule),
+        typeof(AbpAspNetCoreMvcModule),
         typeof(BackendApplicationModule),
         typeof(BackendEntityFrameworkCoreDbMigrationsModule)
         )]
@@ -42,8 +43,13 @@ namespace GelecekBilimde.Backend
             ConfigureSwagger(context);
             ConfigureLocalization();
             ConfigureVirtualFileSystem(context);
-            ConfigureRedis(context, configuration, hostingEnvironment);
             ConfigureCors(context, configuration);
+            ConfigureWordpress(configuration);
+        }
+
+        private void ConfigureWordpress(IConfiguration configuration)
+        {
+            Configure<WordpressConfiguration>(configuration.GetSection("Wordpress"));
         }
 
         private void ConfigureVirtualFileSystem(ServiceConfigurationContext context)
@@ -52,7 +58,7 @@ namespace GelecekBilimde.Backend
 
             if (hostingEnvironment.IsDevelopment())
             {
-                Configure<VirtualFileSystemOptions>(options =>
+                Configure<AbpVirtualFileSystemOptions>(options =>
                 {
                     options.FileSets.ReplaceEmbeddedByPhysical<BackendDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}GelecekBilimde.Backend.Domain.Shared"));
                     options.FileSets.ReplaceEmbeddedByPhysical<BackendDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}GelecekBilimde.Backend.Domain"));
@@ -70,15 +76,9 @@ namespace GelecekBilimde.Backend
             });
         }
 
-        private void ConfigureAuthentication(ServiceConfigurationContext context, IConfigurationRoot configuration)
+        private void ConfigureAuthentication(ServiceConfigurationContext context, IConfiguration configuration)
         {
-            context.Services.AddAuthentication("Bearer")
-                .AddIdentityServerAuthentication(options =>
-                {
-                    options.Authority = configuration["AuthServer:Authority"];
-                    options.RequireHttpsMetadata = true;
-                    options.ApiName = "Backend";
-                });
+            context.Services.AddAuthentication("Bearer");
         }
 
         private static void ConfigureSwagger(ServiceConfigurationContext context)
@@ -86,7 +86,7 @@ namespace GelecekBilimde.Backend
             context.Services.AddSwaggerGen(
                 options =>
                 {
-                    options.SwaggerDoc("v1", new Info {Title = "Backend API", Version = "v1"});
+                    options.SwaggerDoc("v1", new OpenApiInfo {Title = "GelecekBilimde Backend API", Version = "v1"});
                     options.DocInclusionPredicate((docName, description) => true);
                 });
         }
@@ -103,26 +103,7 @@ namespace GelecekBilimde.Backend
             });
         }
 
-        private void ConfigureRedis(
-            ServiceConfigurationContext context,
-            IConfigurationRoot configuration,
-            IHostingEnvironment hostingEnvironment)
-        {
-            context.Services.AddStackExchangeRedisCache(options =>
-            {
-                options.Configuration = configuration["Redis:Configuration"];
-            });
-
-            if (!hostingEnvironment.IsDevelopment())
-            {
-                var redis = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
-                context.Services
-                    .AddDataProtection()
-                    .PersistKeysToStackExchangeRedis(redis, "Backend-Protection-Keys");
-            }
-        }
-
-        private void ConfigureCors(ServiceConfigurationContext context, IConfigurationRoot configuration)
+        private void ConfigureCors(ServiceConfigurationContext context, IConfiguration configuration)
         {
             context.Services.AddCors(options =>
             {
@@ -152,10 +133,6 @@ namespace GelecekBilimde.Backend
 
             app.UseVirtualFiles();
             app.UseAuthentication();
-            if (MultiTenancyConsts.IsEnabled)
-            {
-                app.UseMultiTenancy();
-            }
             app.UseAbpRequestLocalization();
             app.UseSwagger();
             app.UseSwaggerUI(options =>
@@ -163,6 +140,12 @@ namespace GelecekBilimde.Backend
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Backend API");
             });
             app.UseAuditing();
+
+            var rewriteOptions = new RewriteOptions();
+            rewriteOptions.AddRedirect("^$", "swagger");
+            app.UseRewriter(rewriteOptions); 
+            
+            app.UseRouting();
             app.UseMvcWithDefaultRouteAndArea();
         }
     }

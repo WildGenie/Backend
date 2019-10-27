@@ -1,38 +1,27 @@
-﻿using GelecekBilimde.Backend.MultiTenancy;
+﻿using GelecekBilimde.Backend.Articles;
+using GelecekBilimde.Backend.Bookmarks;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
-using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
-using Volo.Abp.IdentityServer;
 using Volo.Abp.Modularity;
-using Volo.Abp.MultiTenancy;
 using Volo.Abp.PermissionManagement.Identity;
-using Volo.Abp.PermissionManagement.IdentityServer;
-using Volo.Abp.SettingManagement;
-using Volo.Abp.TenantManagement;
 
 namespace GelecekBilimde.Backend
 {
     [DependsOn(
         typeof(BackendDomainSharedModule),
         typeof(AbpAuditLoggingDomainModule),
-        typeof(BackgroundJobsDomainModule),
-        typeof(AbpFeatureManagementDomainModule),
+        typeof(AbpBackgroundJobsDomainModule),
         typeof(AbpIdentityDomainModule),
-        typeof(AbpPermissionManagementDomainIdentityModule),
-        typeof(AbpIdentityServerDomainModule),
-        typeof(AbpPermissionManagementDomainIdentityServerModule),
-        typeof(AbpSettingManagementDomainModule),
-        typeof(AbpTenantManagementDomainModule)
+        typeof(AbpPermissionManagementDomainIdentityModule)
         )]
     public class BackendDomainModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            Configure<MultiTenancyOptions>(options =>
-            {
-                options.IsEnabled = MultiTenancyConsts.IsEnabled;
-            });
+            context.Services.AddSingleton<IArticleStore, WordpressArticleStore>();
+            context.Services.AddTransient<IArticleBookmarkService, ArticleBookmarkService>();
         }
     }
 }

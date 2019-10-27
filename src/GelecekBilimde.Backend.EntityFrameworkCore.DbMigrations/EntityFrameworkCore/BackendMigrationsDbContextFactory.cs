@@ -14,7 +14,7 @@ namespace GelecekBilimde.Backend.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<BackendMigrationsDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("Default"));
+                .UseNpgsql(configuration.GetConnectionString("Default"));
 
             return new BackendMigrationsDbContext(builder.Options);
         }

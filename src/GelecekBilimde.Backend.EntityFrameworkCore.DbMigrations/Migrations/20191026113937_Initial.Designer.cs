@@ -3,15 +3,17 @@ using System;
 using GelecekBilimde.Backend.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GelecekBilimde.Backend.Migrations
 {
     [DbContext(typeof(BackendMigrationsDbContext))]
-    partial class BackendMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191026113937_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

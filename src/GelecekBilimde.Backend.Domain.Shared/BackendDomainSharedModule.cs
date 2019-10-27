@@ -1,34 +1,26 @@
 ﻿using GelecekBilimde.Backend.Localization;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
-using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
-using Volo.Abp.IdentityServer;
 using Volo.Abp.Localization;
 using Volo.Abp.Localization.Resources.AbpValidation;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
-using Volo.Abp.SettingManagement;
-using Volo.Abp.TenantManagement;
 using Volo.Abp.VirtualFileSystem;
 
 namespace GelecekBilimde.Backend
 {
     [DependsOn(
         typeof(AbpAuditLoggingDomainSharedModule),
-        typeof(BackgroundJobsDomainSharedModule),
-        typeof(AbpFeatureManagementDomainSharedModule),
+        typeof(AbpBackgroundJobsDomainSharedModule),
         typeof(AbpIdentityDomainSharedModule),
-        typeof(AbpIdentityServerDomainSharedModule),
-        typeof(AbpPermissionManagementDomainSharedModule),
-        typeof(AbpSettingManagementDomainSharedModule),
-        typeof(AbpTenantManagementDomainSharedModule)
+        typeof(AbpPermissionManagementDomainSharedModule)
         )]
     public class BackendDomainSharedModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            Configure<VirtualFileSystemOptions>(options =>
+            Configure<AbpVirtualFileSystemOptions>(options =>
             {
                 options.FileSets.AddEmbedded<BackendDomainSharedModule>("GelecekBilimde.Backend");
             });
