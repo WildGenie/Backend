@@ -1,5 +1,5 @@
 ﻿using GelecekBilimde.Backend.Articles;
-using GelecekBilimde.Backend.Bookmarks;
+using GelecekBilimde.Backend.Articles.Bookmarks;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;

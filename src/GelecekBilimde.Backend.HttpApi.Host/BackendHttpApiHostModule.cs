@@ -1,22 +1,29 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Text;
 using GelecekBilimde.Backend.Articles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using GelecekBilimde.Backend.EntityFrameworkCore;
+using GelecekBilimde.Backend.Swagger;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Protocols;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
+using Swashbuckle.AspNetCore.Filters;
 using Volo.Abp;
 using Volo.Abp.AspNetCore;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Autofac;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
+using Volo.Abp.Threading;
 using Volo.Abp.VirtualFileSystem;
 
 namespace GelecekBilimde.Backend
@@ -45,6 +52,40 @@ namespace GelecekBilimde.Backend
             ConfigureVirtualFileSystem(context);
             ConfigureCors(context, configuration);
             ConfigureWordpress(configuration);
+            ConfigureJwtAuthentication(context, configuration);
+        }
+
+        private void ConfigureJwtAuthentication(ServiceConfigurationContext context, IConfiguration configuration)
+        {
+            string issuer = configuration["Jwt:Issuer"];
+            var configurationManager = new ConfigurationManager<OpenIdConnectConfiguration>(
+                $"{issuer}/.well-known/openid-configuration",
+                new OpenIdConnectConfigurationRetriever(),
+                new HttpDocumentRetriever());
+            var discoveryDocument = AsyncHelper.RunSync(configurationManager.GetConfigurationAsync);
+            var signingKeys = discoveryDocument.SigningKeys;
+
+            context.Services.AddAuthentication(x =>
+                {
+                    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(x =>
+                {
+                    x.RequireHttpsMetadata = false;
+                    x.SaveToken = true;
+                    x.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        RequireSignedTokens = true,
+                        RequireExpirationTime = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = signingKeys.First(),
+                        ValidateIssuer = true,
+                        ValidIssuer = issuer,
+                        ValidateAudience = false
+                    };
+                });
         }
 
         private void ConfigureWordpress(IConfiguration configuration)
@@ -86,8 +127,19 @@ namespace GelecekBilimde.Backend
             context.Services.AddSwaggerGen(
                 options =>
                 {
-                    options.SwaggerDoc("v1", new OpenApiInfo {Title = "GelecekBilimde Backend API", Version = "v1"});
+                    options.SwaggerDoc("v1", new OpenApiInfo { Title = "GelecekBilimde Backend API", Version = "v1" });
                     options.DocInclusionPredicate((docName, description) => true);
+                    options.DocumentFilter<BackendDocumentFilter>();
+                    options.OperationFilter<BackendOperationFilter>();
+                    options.OperationFilter<SecurityRequirementsOperationFilter>();
+                    options.AutoScanXmlComments();
+                    options.AddSecurityDefinition("oidc", new OpenApiSecurityScheme
+                    {
+                        Description = "Standard Authorization header using the Bearer scheme. Example: \"bearer {token}\"",
+                        In = ParameterLocation.Header,
+                        Name = "Authorization",
+                        Type = SecuritySchemeType.OpenIdConnect
+                    });
                 });
         }
 
@@ -133,6 +185,7 @@ namespace GelecekBilimde.Backend
 
             app.UseVirtualFiles();
             app.UseAuthentication();
+            app.UseAuthorization();
             app.UseAbpRequestLocalization();
             app.UseSwagger();
             app.UseSwaggerUI(options =>
@@ -143,8 +196,8 @@ namespace GelecekBilimde.Backend
 
             var rewriteOptions = new RewriteOptions();
             rewriteOptions.AddRedirect("^$", "swagger");
-            app.UseRewriter(rewriteOptions); 
-            
+            app.UseRewriter(rewriteOptions);
+
             app.UseRouting();
             app.UseMvcWithDefaultRouteAndArea();
         }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using GelecekBilimde.Backend.Articles;
 
 namespace GelecekBilimde.Backend
 {
@@ -6,9 +7,7 @@ namespace GelecekBilimde.Backend
     {
         public BackendApplicationAutoMapperProfile()
         {
-            /* You can configure your AutoMapper mapping configuration here.
-             * Alternatively, you can split your mapping configurations
-             * into multiple profile classes for a better organization. */
+            CreateMap<Article, ArticleDto>();
         }
     }
 }
