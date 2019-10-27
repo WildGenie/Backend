@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GelecekBilimde.Backend.Application.Contracts\GelecekBilimde.Backend.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\GelecekBilimde.Backend.Application.Contracts\GelecekBilimde.Backend.Application.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

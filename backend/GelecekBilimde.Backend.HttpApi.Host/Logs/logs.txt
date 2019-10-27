@@ -1,0 +1,259 @@
+2019-10-27 13:08:50.170 +03:00 [INF] Starting API host.
+2019-10-27 13:08:56.647 +03:00 [INF] User profile is available. Using 'C:\Users\troja\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-27 13:08:56.854 +03:00 [INF] Loaded ABP modules:
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Users.AbpUsersDomainSharedModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Security.AbpSecurityModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Uow.AbpUnitOfWorkModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Data.AbpDataModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Settings.AbpSettingsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Localization.AbpLocalizationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2019-10-27 13:08:56.854 +03:00 [INF] - GelecekBilimde.Backend.BackendDomainSharedModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.EventBus.AbpEventBusModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Users.AbpUsersAbstractionModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Authorization.AbpAuthorizationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Timing.AbpTimingModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Json.AbpJsonModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Threading.AbpThreadingModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Auditing.AbpAuditingModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Guids.AbpGuidsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Domain.AbpDddDomainModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Application.AbpDddApplicationContractsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Validation.AbpValidationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Http.AbpHttpAbstractionsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Features.AbpFeaturesModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Application.AbpDddApplicationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - GelecekBilimde.Backend.BackendApplicationContractsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Http.AbpHttpModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.UI.AbpUiModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Account.AbpAccountHttpApiModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2019-10-27 13:08:56.854 +03:00 [INF] - GelecekBilimde.Backend.BackendHttpApiModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Castle.AbpCastleCoreModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Autofac.AbpAutofacModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Users.AbpUsersDomainModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityDomainModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Serialization.AbpSerializationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Caching.AbpCachingModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2019-10-27 13:08:56.854 +03:00 [INF] - GelecekBilimde.Backend.BackendDomainModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityApplicationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Account.AbpAccountApplicationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - GelecekBilimde.Backend.BackendApplicationModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.EntityFrameworkCore.PostgreSql.AbpEntityFrameworkCorePostgreSqlModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2019-10-27 13:08:56.854 +03:00 [INF] - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2019-10-27 13:08:56.854 +03:00 [INF] - GelecekBilimde.Backend.EntityFrameworkCore.BackendEntityFrameworkCoreModule
+2019-10-27 13:08:56.854 +03:00 [INF] - GelecekBilimde.Backend.EntityFrameworkCore.BackendEntityFrameworkCoreDbMigrationsModule
+2019-10-27 13:08:56.854 +03:00 [INF] - GelecekBilimde.Backend.BackendHttpApiHostModule
+2019-10-27 13:08:57.150 +03:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2019-10-27 13:09:29.790 +03:00 [INF] Starting API host.
+2019-10-27 13:09:31.847 +03:00 [INF] User profile is available. Using 'C:\Users\troja\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-27 13:09:31.935 +03:00 [INF] Loaded ABP modules:
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Users.AbpUsersDomainSharedModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Security.AbpSecurityModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Uow.AbpUnitOfWorkModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Data.AbpDataModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Settings.AbpSettingsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Localization.AbpLocalizationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2019-10-27 13:09:31.936 +03:00 [INF] - GelecekBilimde.Backend.BackendDomainSharedModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.EventBus.AbpEventBusModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Users.AbpUsersAbstractionModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Authorization.AbpAuthorizationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Timing.AbpTimingModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Json.AbpJsonModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Threading.AbpThreadingModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Auditing.AbpAuditingModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Guids.AbpGuidsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Domain.AbpDddDomainModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Application.AbpDddApplicationContractsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Validation.AbpValidationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Http.AbpHttpAbstractionsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Features.AbpFeaturesModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Application.AbpDddApplicationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - GelecekBilimde.Backend.BackendApplicationContractsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Http.AbpHttpModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.UI.AbpUiModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Account.AbpAccountHttpApiModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2019-10-27 13:09:31.936 +03:00 [INF] - GelecekBilimde.Backend.BackendHttpApiModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Castle.AbpCastleCoreModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Autofac.AbpAutofacModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Users.AbpUsersDomainModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityDomainModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Serialization.AbpSerializationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Caching.AbpCachingModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2019-10-27 13:09:31.936 +03:00 [INF] - GelecekBilimde.Backend.BackendDomainModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityApplicationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Account.AbpAccountApplicationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - GelecekBilimde.Backend.BackendApplicationModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.EntityFrameworkCore.PostgreSql.AbpEntityFrameworkCorePostgreSqlModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2019-10-27 13:09:31.936 +03:00 [INF] - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2019-10-27 13:09:31.936 +03:00 [INF] - GelecekBilimde.Backend.EntityFrameworkCore.BackendEntityFrameworkCoreModule
+2019-10-27 13:09:31.936 +03:00 [INF] - GelecekBilimde.Backend.EntityFrameworkCore.BackendEntityFrameworkCoreDbMigrationsModule
+2019-10-27 13:09:31.936 +03:00 [INF] - GelecekBilimde.Backend.BackendHttpApiHostModule
+2019-10-27 13:09:32.151 +03:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2019-10-27 13:09:48.291 +03:00 [INF] Starting API host.
+2019-10-27 13:09:50.278 +03:00 [INF] User profile is available. Using 'C:\Users\troja\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-27 13:09:50.377 +03:00 [INF] Loaded ABP modules:
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Users.AbpUsersDomainSharedModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Security.AbpSecurityModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Uow.AbpUnitOfWorkModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Data.AbpDataModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Settings.AbpSettingsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Localization.AbpLocalizationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2019-10-27 13:09:50.377 +03:00 [INF] - GelecekBilimde.Backend.BackendDomainSharedModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.EventBus.AbpEventBusModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Users.AbpUsersAbstractionModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Authorization.AbpAuthorizationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Timing.AbpTimingModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Json.AbpJsonModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Threading.AbpThreadingModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Auditing.AbpAuditingModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Guids.AbpGuidsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Domain.AbpDddDomainModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Application.AbpDddApplicationContractsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Validation.AbpValidationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Http.AbpHttpAbstractionsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Features.AbpFeaturesModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Application.AbpDddApplicationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - GelecekBilimde.Backend.BackendApplicationContractsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Http.AbpHttpModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.UI.AbpUiModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Account.AbpAccountHttpApiModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2019-10-27 13:09:50.377 +03:00 [INF] - GelecekBilimde.Backend.BackendHttpApiModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Castle.AbpCastleCoreModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Autofac.AbpAutofacModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Users.AbpUsersDomainModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityDomainModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Serialization.AbpSerializationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Caching.AbpCachingModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.PermissionManagement.Identity.AbpPermissionManagementDomainIdentityModule
+2019-10-27 13:09:50.377 +03:00 [INF] - GelecekBilimde.Backend.BackendDomainModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Identity.AbpIdentityApplicationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Account.AbpAccountApplicationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - GelecekBilimde.Backend.BackendApplicationModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.EntityFrameworkCore.PostgreSql.AbpEntityFrameworkCorePostgreSqlModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2019-10-27 13:09:50.377 +03:00 [INF] - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2019-10-27 13:09:50.377 +03:00 [INF] - GelecekBilimde.Backend.EntityFrameworkCore.BackendEntityFrameworkCoreModule
+2019-10-27 13:09:50.377 +03:00 [INF] - GelecekBilimde.Backend.EntityFrameworkCore.BackendEntityFrameworkCoreDbMigrationsModule
+2019-10-27 13:09:50.377 +03:00 [INF] - GelecekBilimde.Backend.BackendHttpApiHostModule
+2019-10-27 13:09:50.581 +03:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2019-10-27 13:09:51.314 +03:00 [INF] Initialized all ABP modules.
+2019-10-27 13:09:51.351 +03:00 [FTL] Application startup exception
+System.MissingMethodException: Method not found: 'Void Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware..ctor(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IHostingEnvironment, Microsoft.Extensions.Options.IOptions`1<Microsoft.AspNetCore.Builder.StaticFileOptions>, Microsoft.Extensions.Logging.ILoggerFactory)'.
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.CreateStaticFileMiddleware(RequestDelegate next, IHostingEnvironment hostingEnv, ILoggerFactory loggerFactory, SwaggerUIOptions options)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware..ctor(RequestDelegate next, IHostingEnvironment hostingEnv, ILoggerFactory loggerFactory, SwaggerUIOptions options)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2019-10-27 13:09:51.383 +03:00 [FTL] Host terminated unexpectedly!
+System.MissingMethodException: Method not found: 'Void Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware..ctor(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.AspNetCore.Hosting.IHostingEnvironment, Microsoft.Extensions.Options.IOptions`1<Microsoft.AspNetCore.Builder.StaticFileOptions>, Microsoft.Extensions.Logging.ILoggerFactory)'.
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.CreateStaticFileMiddleware(RequestDelegate next, IHostingEnvironment hostingEnv, ILoggerFactory loggerFactory, SwaggerUIOptions options)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware..ctor(RequestDelegate next, IHostingEnvironment hostingEnv, ILoggerFactory loggerFactory, SwaggerUIOptions options)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at GelecekBilimde.Backend.Program.Main(String[] args) in C:\Users\troja\source\repos\GelecekBilimde\src\GelecekBilimde.Backend.HttpApi.Host\Program.cs:line 28
