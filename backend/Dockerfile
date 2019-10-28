@@ -18,6 +18,5 @@ VOLUME /app/wwwroot
 
 WORKDIR /app
 COPY --from=publish /app .
-HEALTHCHECK CMD curl --fail http://localhost:5000/health || exit 1
 RUN chmod +x ./wait-for-it.sh
 ENTRYPOINT ["./wait-for-it.sh", "postgresql:5432", "--", "dotnet", "GelecekBilimde.Backend.HttpApi.Host.dll"]

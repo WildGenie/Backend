@@ -30,4 +30,10 @@
     <ProjectReference Include="..\..\src\GelecekBilimde.Backend.EntityFrameworkCore.DbMigrations\GelecekBilimde.Backend.EntityFrameworkCore.DbMigrations.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="wait-for-it.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
